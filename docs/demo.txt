@@ -1,0 +1,37 @@
+Терминальная проверка: Linux, Python 3.12, 16 сентября 2026.
+Запущено через PTY с реальным домашним каталогом процесса.
+^C означает Ctrl+C; второй сеанс завершён Ctrl+D (EOF).
+
+Эмулятор оболочки — вариант 21, этап 1.
+root@localhost:~$ ls
+ls: аргументы = []
+root@localhost:~$ ls -la /tmp
+ls: аргументы = ["-la", "/tmp"]
+root@localhost:~$ cd "my folder"
+cd: аргументы = ["my folder"]
+root@localhost:~$ ls "$HOME" "${HOME}/docs"
+ls: аргументы = ["/root", "/root/docs"]
+root@localhost:~$ ls '$HOME' \$HOME
+ls: аргументы = ["$HOME", "$HOME"]
+root@localhost:~$ ls "" $MIREA_DEMO_UNSET_21
+ls: аргументы = ["", ""]
+root@localhost:~$ 
+root@localhost:~$ unknown
+unknown: команда не найдена
+root@localhost:~$ ls "
+Ошибка синтаксиса: Не закрыта двойная кавычка
+root@localhost:~$ ls ${HOME
+Ошибка синтаксиса: Не закрыта фигурная скобка переменной
+root@localhost:~$ ls | cd
+Ошибка синтаксиса: Оператор '|' пока не поддерживается
+root@localhost:~$ exit 1
+exit: аргументы не поддерживаются
+root@localhost:~$ ^C
+Ввод отменён.
+root@localhost:~$ ls
+ls: аргументы = []
+root@localhost:~$ exit
+Выход из эмулятора.
+Эмулятор оболочки — вариант 21, этап 1.
+root@localhost:~$ 
+Конец ввода. Выход из эмулятора.
