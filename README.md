@@ -159,7 +159,4 @@ student@laptop:~$ exit
 
 Полная запись терминальной проверки: [docs/demo.txt](docs/demo.txt).
 Порядок демонстрации и вопросы для защиты: [docs/defense.md](docs/defense.md).
-
-## 5. Использование нейросети
-
-При подготовке кода, тестов и документации использован ChatGPT (OpenAI).
+docs(readme): update documentation
